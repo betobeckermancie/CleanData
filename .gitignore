@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,visualstudiocode,windows
 
+/data.csv
+
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
