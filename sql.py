@@ -1,13 +1,16 @@
 #kajakj hjaskjask
 
 import sqlite3
-conn = sqlite3.connect("Limpieza.db")
-cur = conn.cursor()
 
-sql = """
+def connection():
+    conn = sqlite3.connect("Limpieza.db")
+    cursor = conn.cursor()
 
-CREATE TABLE Fraud(
-    Id_Step INTEGER,
+    sql = """
+
+    CREATE TABLE Fraud(
+    id INTEGER PRIMARY KEY ,
+    step INTEGER,
     type TEXT,
     amount REAL,
     nameOrig TEXT,
@@ -18,12 +21,13 @@ CREATE TABLE Fraud(
     newbalanceDest INTEGER,
     isFraud INTEGER,
     isFlaggedFraud INTEGER,
-    primary key(Id_Step)
-
-    ) """
+    ) 
+    """
 
     cur.execute(sql)
     print("Base de datos creada wuwu")
 
     conn.commit()
     conn.close()
+
+
